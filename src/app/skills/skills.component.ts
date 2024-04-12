@@ -1,15 +1,15 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, HostBinding } from '@angular/core';
+import { Skill } from '../models/models';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-skills',
+  templateUrl: './skills.component.html',
+  styleUrl: './skills.component.css'
 })
-export class AppComponent {
-  title = 'Portfolio';
+export class SkillsComponent {
   @HostBinding('class.pc') pcMode = false;
-
+  
   constructor(private breakpointObserver: BreakpointObserver) {
     this.breakpointObserver
       .observe([Breakpoints.HandsetPortrait, Breakpoints.WebLandscape])
@@ -25,4 +25,32 @@ export class AppComponent {
         },
       });
   }
+  skills : Skill[]=[
+    {
+      name: 'Angular,Angular Material',
+      level: 'Intermidiate',
+      rating: 70
+    },
+   
+    {
+      name: 'HTML,CSS,JavaScript',
+      level: 'Intermidiate',
+      rating: 70
+    },
+    {
+      name: 'ASP.Net Core',
+      level: 'Beginner',
+      rating: 30
+    },
+    {
+      name: 'Node.js',
+      level: 'Intermidiate',
+      rating: 65
+    },
+    {
+      name: 'MySQL',
+      level: 'Intermidiate',
+      rating: 60
+    }
+  ]
 }

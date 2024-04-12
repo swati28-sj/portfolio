@@ -1,13 +1,13 @@
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Component, HostBinding } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-baner',
+  templateUrl: './baner.component.html',
+  styleUrl: './baner.component.css',
 })
-export class AppComponent {
-  title = 'Portfolio';
+export class BanerComponent{
+
   @HostBinding('class.pc') pcMode = false;
 
   constructor(private breakpointObserver: BreakpointObserver) {

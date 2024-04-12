@@ -1,0 +1,19 @@
+:host{
+    color: white;
+    display: block;
+    padding: 2rem 3rem;
+}
+section{
+    margin-top: 2rem;
+}
+section h2{
+    color: var(--green);
+}
+section h3{
+    margin-top: 0.5rm;
+    color: var(--gray-light);
+}
+section ul{
+    margin-top: 0.5rem;
+    list-style: circle;
+}
